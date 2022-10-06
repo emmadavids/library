@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script async defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+      
+        <button class="openForm">
+            Add book
+            </button>
+         
+
+<!-- The form -->
+<div class="form-popup" id="myForm">
+  <form id="myform" action="/action_page.php" class="form-container">
+    <h1>Add a book</h1>
+
+    <label for="author"><b>Author</b></label>
+        <input id="author" type="text" placeholder="Enter Author" name="author" required>
+    <label for="title"><b>Title of book</b></label>
+        <input type="text" placeholder="Enter title" name="title" required>
+    <label for="pages"><b>Number of Pages</b></label>
+        <input type="number" placeholder="number of pages" name="pages" required>
+    
+            <div id='checkBox'>
+                <label for="name" >Have you read this book?: </label>
+                    <!-- <input type="hidden" id='read' name='read' value="no" /> -->
+                    <input type='checkbox' id='read' name='read' value="0" onclick='handleClick(this)'>
+            </div>
+        
+    <button type="submit" class="button" onclick="showInput(event)">Add</button>
+    <button type="button" class="button cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+
+            <div class="main">
+             
+            </div>
+      </div>
+</body>
+</html>
