@@ -1,12 +1,14 @@
 const myLibrary = []
 
 
-function Book(author, title, pages, read) {
+class Book {
+  constructor(author, title, pages, read) {
   this.author = author;
   this.title = title;
   this.pages = pages;
   this.read = read;
-  this.markRead = function() {
+  }
+  markRead() {
    if (this.read == 1) {
     this.read = 0
    }
@@ -14,6 +16,9 @@ function Book(author, title, pages, read) {
    { this.read = 1}
   }
 }
+
+
+
 
 function showInput(e) {
   e.preventDefault();
@@ -26,6 +31,7 @@ function showInput(e) {
   displayBooks()
 
   }
+
 
 
 function handleClick(cb) {
